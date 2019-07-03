@@ -115,21 +115,20 @@ Slider.prototype.dotCurrent = function () {
     $(".dots").children("#"+pos).addClass(" active")
 };
 
-Slider.prototype.dotClick = function (id) {
-    var pos = this.current;
+Slider.prototype.dotClick = function (id,active) {
 
-    if(id > pos) {
-        pos += parseInt(id);
-    }
+    var pos = parseInt(id);
+    var act = parseInt(active);
 
-    else if (id <pos) {
-        pos -= parseInt(id);
-    }
+    this.container.animate({
+        'margin-left': -((pos-act)*this.imgWidth) //the nay a?
+    });
 
+    $(".dot").removeClass("active");
 
     this.current = (pos < 0) ? this.imgsLen - 1 : pos % this.imgsLen;
 
-    console.log(this.current);
-
     return pos;
-}
+
+
+};

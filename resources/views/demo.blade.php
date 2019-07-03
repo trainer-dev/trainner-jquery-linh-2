@@ -50,9 +50,14 @@
         slider.dotCurrent();
 
         $(".dot").click(function () {
-            var id = $(this).attr("id");
+            var previousActiveDot = $(".dot.active").prop('id')
 
-            slider.dotClick(id);
+            var id = $(this).attr("id"); //lay current active dot, roi lay thang sau tru thang truoc
+
+            slider.dotClick(id, previousActiveDot);
+
+            $("#"+id).addClass(" active");
+
         });
 
         $(".item").hide();
