@@ -1,0 +1,96 @@
+*
+{
+    margin:0;
+    padding:0;
+}
+
+.gallery
+{
+    width: 100%;
+    margin:0 auto;
+    height: 400px;
+    position: relative;
+}
+
+.slider
+{
+    width:600px;
+    margin: 0 auto;
+    /*overflow:scroll;*/
+}
+.slider ul
+{
+    width:10000px;
+    list-style:none;
+    margin-left:0px;
+}
+.slider li
+{
+    float:left;
+}
+
+#slider-nav
+{
+    width: 100%;
+    display:none; /* This is important to hide the buttons if jQuery is Not supported. */
+    cursor: pointer;
+    top: 50%;
+    position: absolute;
+}
+
+.slides {
+    width: 100%;
+}
+
+.prev {
+    margin-left: 20%;
+}
+.next{
+    float: right;
+    margin-right: 20%;
+}
+
+
+#thumbnail{
+    width: 100%;
+    /*display:none;*/
+    position: relative;
+    top: -65%;
+}
+
+.item {
+    width: 10%;
+    border: 1px solid black;
+    margin: 0;
+}
+
+.nextImage {
+    float: right;
+    margin-right: 5%;
+}
+
+.prevImage {
+    margin-left: 5%;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+#dots {
+    text-align: center;
+    margin-top: 20px;
+    display: block;
+}

@@ -1,0 +1,105 @@
+.container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.text-block {
+    width: 25%;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: black;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1.2vw;
+}
+
+.slideshow {
+    display: -webkit-flex; /* Safari */
+    -webkit-align-items: center; /* Safari 7.0+ */
+    display: flex;
+    align-items: center;
+}
+
+.slideshow ul {
+    list-style-type: none;
+    overflow: hidden;
+    display: -webkit-flex; /* Safari */
+    -webkit-align-items: center; /* Safari 7.0+ */
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-left: 0;
+}
+.slideshow ul li {
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+    max-width: 60%;
+    min-width: calc(39%/4);
+}
+
+.image {
+    width: 60%;
+
+}
+
+.thumnail {
+    width: 10%;
+}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Six columns side by side */
+.column {
+    float: left;
+    width: calc(100%/5);
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+    opacity: 0.6;
+}
+
+.list ul {
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 15px;
+    overflow: hidden;
+}
+.list ul li {
+    float: left;
+    width: calc(100%/5);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.current {
+    transform: translate3d(0, 0, 0);
+}
+.past {
+    transform: translate3d(-100%, 0, 0);
+}
